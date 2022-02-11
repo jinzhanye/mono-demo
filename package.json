@@ -4,19 +4,30 @@
   "description": "",
   "main": "index.js",
   "workspaces": [
-    "packages/@odin/*"
+    "packages/*"
   ],
   "scripts": {
     "lint": "eslint --ext .js"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/config-lerna-scopes": "^16.0.0",
+    "commitlint": "^16.1.0",
     "eslint": "^8.8.0",
-    "lerna": "^4.0.0"
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^2.2.0"
   },
   "dependencies": {
-    "eslint-config-standard": "^16.0.3"
+    "lodash": "^4.17.21"
   }
 }
